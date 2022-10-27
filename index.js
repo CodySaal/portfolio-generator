@@ -5,7 +5,7 @@ inquirer
         {
             type: "input",
             message: "What is your full name?",
-            name: "full name"
+            name: "name"
         },
         {
             type: "input",
@@ -20,11 +20,15 @@ inquirer
         {
             type: "input",
             message: "What is your LinkedIn URL?",
-            name: "LinkedIn"
+            name: "linkedinURL"
         },
         {
             type: "input",
             message: "What is your GitHub URL?",
-            name: "GitHub"
+            name: "githubURL"
         }
     ])
+        .then((answers) => {
+            console.log(answers)
+        })
+        .catch(error => console.log(error))
