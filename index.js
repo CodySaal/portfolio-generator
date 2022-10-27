@@ -1,4 +1,6 @@
+import fs from "fs"
 import inquirer from "inquirer";
+import generateHTML from "./generateHTML.js"
 
 inquirer
     .prompt([
@@ -30,5 +32,14 @@ inquirer
     ])
         .then((answers) => {
             console.log(answers)
+            // generate HTML string
+            const html = generateHTML(answers)
+            console.log(html)
+            // write (save) the file
+            fs.writeFile("./portfolio.html", html, error => {
+                if (error) throw error
+
+                console.log("HTML saved!")
+            })
         })
         .catch(error => console.log(error))
