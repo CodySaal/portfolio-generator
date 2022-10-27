@@ -24,7 +24,7 @@ const generateHTML = (data) => {
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="" class="img-fluid" alt="Picture of ${name}"
+                    <img src="" class="img-fluid" alt="Picture of ${name}">
                 </div>
                 <div class="col-md-6">
                     <h1>${name}'s Portfolio</h1>
